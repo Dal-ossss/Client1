@@ -178,6 +178,7 @@ portfolioItems.forEach(item => {
     });
 });
 
+
 // Initialize portfolio with 'all' filter active
 document.addEventListener('DOMContentLoaded', () => {
     // Trigger the 'all' filter to show all items initially
