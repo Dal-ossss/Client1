@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Floating Particles -->
+    <div class="particles" id="particles"></div>
+
     <!-- Header Section -->
     <header id="home">
         <div class="container">
@@ -31,31 +37,34 @@
 
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1>Joel Butal</h1>
-                    <h3>Data Analyst & Business Intelligence Specialist</h3>
-                    <p>Specialized in data visualization, statistical analysis, and predictive modeling</p>
+                    <h1>Joel <span class="highlight">Butal</span></h1>
+                    <h3 class="typing-text">Data Analyst & Business Intelligence Specialist</h3>
+                    <p>Specialized in data visualization, statistical analysis, and predictive modeling. Transforming complex data into actionable insights that drive business growth.</p>
                     <div class="hero-buttons">
                         <a href="#portfolio" class="btn">View My Work</a>
                         <a href="#contact" class="btn btn-outline">Get In Touch</a>
                     </div>
                 </div>
                 <div class="hero-image">
-                    <img src="profile.jpg" alt="Joel Butal">
+                    <img src="profile.jpg" alt="Joel Butal" id="profileImage">
+                    <div class="play-button" id="playButton">
+                        <i class="fas fa-play"></i>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
 
     <!-- About Section -->
-    <section id="about" class="about">
+    <section id="about" class="about fade-in-section">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <h2 class="section-title animate-on-scroll">About Me</h2>
             <div class="about-content">
-                <div class="about-text">
+                <div class="about-text animate-on-scroll">
                     <h3>Data Analyst with 3+ Years of Experience</h3>
                     <p>I specialize in turning complex data into clear, actionable insights. This portfolio highlights my work in data analysis, reporting, and business intelligence, demonstrating how data can drive smarter decisions and improve processes.</p>
                     <div class="skills">
-                        <div class="skill-category">
+                        <div class="skill-category stagger-item">
                             <h4>Technical Skills</h4>
                             <ul>
                                 <li>Data Analysis (Cleaning, Interpretation, Trends)</li>
@@ -65,14 +74,14 @@
                                 <li>SQL & Database Management</li>
                             </ul>
                         </div>
-                        <div class="skill-category">
+                        <div class="skill-category stagger-item">
                             <h4>Data Visualization</h4>
                             <ul>
                                 <li>Power BI (Dashboard Development)</li>
                                 <li>Tableau</li>
                             </ul>
                         </div>
-                        <div class="skill-category">
+                        <div class="skill-category stagger-item">
                             <h4>Soft Skills</h4>
                             <ul>
                                 <li>Attention to Detail</li>
@@ -80,30 +89,29 @@
                                 <li>Communication of Insights</li>
                             </ul>
                         </div>
-                        <div class="skill-category">
+                        <div class="skill-category stagger-item">
                             <h4>Certifications</h4>
                             <ul>
                                 <li>Google Data Analytics</li>
-                               
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="about-stats">
-                    <div class="stat-item">
-                        <h3>50+</h3>
+                <div class="about-stats animate-on-scroll">
+                    <div class="stat-item stagger-item">
+                        <h3 data-target="150">0</h3>
                         <p>Projects Completed</p>
                     </div>
-                    <div class="stat-item">
-                        <h3>3+</h3>
+                    <div class="stat-item stagger-item">
+                        <h3 data-target="8">0</h3>
                         <p>Years Experience</p>
                     </div>
-                    <div class="stat-item">
-                        <h3>50+</h3>
+                    <div class="stat-item stagger-item">
+                        <h3 data-target="50">0</h3>
                         <p>Happy Clients</p>
                     </div>
-                    <div class="stat-item">
-                        <h3>25+</h3>
+                    <div class="stat-item stagger-item">
+                        <h3 data-target="25">0</h3>
                         <p>Certifications</p>
                     </div>
                 </div>
@@ -112,46 +120,46 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="services">
+    <section id="services" class="services fade-in-section">
         <div class="container">
-            <h2 class="section-title">My Services</h2>
+            <h2 class="section-title animate-on-scroll">My Services</h2>
             <div class="services-grid">
-                <div class="service-card">
+                <div class="service-card stagger-item">
                     <div class="service-icon">
                         <i class="fas fa-chart-bar"></i>
                     </div>
                     <h3>Data Visualization</h3>
                     <p>Transform complex data into interactive dashboards and visual reports using Tableau, Power BI, and Python libraries.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card stagger-item">
                     <div class="service-icon">
                         <i class="fas fa-brain"></i>
                     </div>
-                    <h3>Python </h3>
-                    <p>Python language of web and android application</p>
+                    <h3>Python Development</h3>
+                    <p>Python language for web and android application development with modern frameworks and best practices.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card stagger-item">
                     <div class="service-icon">
                         <i class="fas fa-database"></i>
                     </div>
                     <h3>Data Engineering</h3>
                     <p>Design and implement data pipelines, ETL processes, and data warehouses for efficient data management.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card stagger-item">
                     <div class="service-icon">
                         <i class="fas fa-search"></i>
                     </div>
                     <h3>Statistical Analysis</h3>
                     <p>Perform comprehensive statistical analysis to validate hypotheses and support data-driven decisions.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card stagger-item">
                     <div class="service-icon">
                         <i class="fas fa-file-alt"></i>
                     </div>
                     <h3>Business Intelligence</h3>
                     <p>Implement BI solutions that provide actionable insights and KPI tracking for strategic planning.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card stagger-item">
                     <div class="service-icon">
                         <i class="fas fa-comments"></i>
                     </div>
@@ -163,90 +171,90 @@
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
+    <section id="portfolio" class="portfolio fade-in-section">
         <div class="container">
-            <h2 class="section-title">My Projects</h2>
+            <h2 class="section-title animate-on-scroll">My Projects</h2>
             <div class="filter-buttons">
                 <button class="filter-btn active" data-filter="all">All</button>
                 <button class="filter-btn" data-filter="visualization">Visualization</button>
-                 <button class="filter-btn" data-filter="mysql">Mysql</button>
+                <button class="filter-btn" data-filter="mysql">MySQL</button>
             </div>
             <div class="portfolio-grid">
-                <div class="portfolio-item" data-category="visualization">
+                <div class="portfolio-item stagger-item" data-category="visualization">
                     <img src="10.png" alt="Data Dashboard Presentation Using Charts">
                     <div class="portfolio-overlay">
                         <h3>Data Dashboard Presentation Using Charts</h3>
                         <p>This figure shows a summarize and clean data using charts for visualization and for easy presentation.</p>
                     </div>
                 </div>
-                <div class="portfolio-item" data-category="visualization">
+                <div class="portfolio-item stagger-item" data-category="visualization">
                     <img src="sales.png" alt="Sales Dashboard">
                     <div class="portfolio-overlay">
                         <h3>Sales Dashboard</h3>
                         <p>This figure shows a summarize and clean data using charts for visualization and for easy presentation.</p>
                     </div>
                 </div>
-                <div class="portfolio-item" data-category="visualization">
+                <div class="portfolio-item stagger-item" data-category="visualization">
                     <img src="northsales.png" alt="North Sales Dashboard">
                     <div class="portfolio-overlay">
                         <h3>North Sales Dashboard</h3>
                         <p>This figure shows a visualize data presenting the total sales of the watch in north, payment method in pie chart, Q\quantity of the product using barchart, and sales every day that shows from the line chart.</p>
                     </div>
                 </div>
-                <div class="portfolio-item" data-category="mysql">
-                    <img src="1.png" alt="Sales Dashboard">
+                <div class="portfolio-item stagger-item" data-category="mysql">
+                    <img src="1.png" alt="MySQL Database Design">
                     <div class="portfolio-overlay">
-                        <h3>Mysql</h3>
-                        <p></p>
+                        <h3>MySQL Database</h3>
+                        <p>Database design and management for efficient data storage and retrieval.</p>
                     </div>
                 </div>
-                <div class="portfolio-item" data-category="mysql">
+                <div class="portfolio-item stagger-item" data-category="mysql">
                     <img src="2.png" alt="Customer Churn Prediction">
                      <div class="portfolio-overlay">
-                        <h3>Mysql</h3>
-                        <p></p>
+                        <h3>MySQL Queries</h3>
+                        <p>Complex SQL queries for data analysis and reporting.</p>
                     </div>
                 </div>
-                <div class="portfolio-item" data-category="mysql">
+                <div class="portfolio-item stagger-item" data-category="mysql">
                     <img src="3.png" alt="Financial Reporting System">
                     <div class="portfolio-overlay">
-                        <h3>Mysql</h3>
-                        <p></p>
+                        <h3>MySQL Reports</h3>
+                        <p>Automated reporting systems using MySQL databases.</p>
                     </div>
                 </div>
-                <div class="portfolio-item" data-category="mysql">
+                <div class="portfolio-item stagger-item" data-category="mysql">
                     <img src="4.png" alt="Healthcare Analytics">
                    <div class="portfolio-overlay">
-                        <h3>Mysql</h3>
-                        <p></p>
+                        <h3>MySQL Analytics</h3>
+                        <p>Healthcare data analytics using MySQL for insights.</p>
                     </div>
                 </div>
-                <div class="portfolio-item" data-category="mysql">
+                <div class="portfolio-item stagger-item" data-category="mysql">
                     <img src="6.png" alt="Supply Chain Optimization">
                     <div class="portfolio-overlay">
-                        <h3>Mysql</h3>
-                        <p></p>
+                        <h3>Supply Chain Database</h3>
+                        <p>Database optimization for supply chain management.</p>
                     </div>
                 </div>
-                 <div class="portfolio-item" data-category="mysql">
+                 <div class="portfolio-item stagger-item" data-category="mysql">
                     <img src="7.png" alt="Supply Chain Optimization">
                     <div class="portfolio-overlay">
-                        <h3>Mysql</h3>
-                        <p></p>
+                        <h3>Inventory Management</h3>
+                        <p>MySQL database for inventory tracking and management.</p>
                     </div>
                 </div>
-                 <div class="portfolio-item" data-category="mysql">
+                 <div class="portfolio-item stagger-item" data-category="mysql">
                     <img src="8.png" alt="Supply Chain Optimization">
                     <div class="portfolio-overlay">
-                        <h3>Mysql</h3>
-                        <p></p>
+                        <h3>Order Processing</h3>
+                        <p>Efficient order processing system using MySQL.</p>
                     </div>
                 </div>
-                 <div class="portfolio-item" data-category="mysql">
+                 <div class="portfolio-item stagger-item" data-category="mysql">
                     <img src="9.png" alt="Supply Chain Optimization">
                      <div class="portfolio-overlay">
-                        <h3>Mysql</h3>
-                        <p></p>
+                        <h3>Data Integration</h3>
+                        <p>Seamless data integration across multiple MySQL databases.</p>
                     </div>
                 </div>
                 
@@ -254,12 +262,31 @@
         </div>
     </section>
 
+        <!-- Image Modal -->
+        <div id="imageModal" class="image-modal">
+            <span class="close-modal">&times;</span>
+            <img class="modal-content" id="modalImage" alt="Full Project Image">
+        </div>
+
+        <!-- Video Modal -->
+        <div id="videoModal" class="video-modal">
+            <div class="video-modal-content">
+                <span class="close-video-modal">&times;</span>
+                <div class="video-container">
+                    <video id="profileVideo" controls>
+                        <source src="vid.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section id="contact" class="contact fade-in-section">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
+            <h2 class="section-title animate-on-scroll">Get In Touch</h2>
             <div class="contact-content">
-                <div class="contact-info">
+                <div class="contact-info animate-on-scroll">
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
                         <div>
@@ -295,7 +322,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 Joel Batul. All rights reserved.</p>
+            <p>&copy; 2026 Joel <span>Butal</span>. All rights reserved.</p>
         </div>
     </footer>
 
